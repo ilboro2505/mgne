@@ -1,0 +1,20 @@
+[package]
+name = "mgne-core"
+version.workspace = true
+edition.workspace = true
+description = "Event-driven modified network of generalized neural elements"
+
+[lib]
+crate-type = ["rlib", "cdylib"]
+
+[features]
+default = []
+wasm = ["dep:wasm-bindgen"]
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+# Keep native and WASM transcendental routines identical; changing this version
+# is a numerical-contract change and requires the long cross-runtime test.
+libm = { version = "=0.2.16", default-features = false }
+wasm-bindgen = { version = "0.2", optional = true }

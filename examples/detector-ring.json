@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "model": "mone-initial-drive-v1",
+  "parameters": { "threshold": 20, "rest": 17, "alpha": 0.5, "refractoryPeriod": 3 },
+  "neurons": [
+    { "id": "1", "potential": 0, "state": "receptive", "initialDrive": 5 },
+    { "id": "2", "potential": 0, "state": "receptive" },
+    { "id": "3", "potential": 0, "state": "receptive" },
+    { "id": "4", "potential": 0, "state": "receptive" },
+    { "id": "5", "potential": 0, "state": "receptive" },
+    { "id": "6", "potential": 0, "state": "receptive" }
+  ],
+  "connections": [
+    { "source": "1", "target": "2", "weight": 5 },
+    { "source": "2", "target": "3", "weight": 5 },
+    { "source": "3", "target": "4", "weight": 5 },
+    { "source": "4", "target": "5", "weight": 5 },
+    { "source": "5", "target": "6", "weight": 5 },
+    { "source": "6", "target": "1", "weight": 5 }
+  ]
+}

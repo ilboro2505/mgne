@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "model": "mone-v1",
+  "parameters": { "threshold": 20, "rest": 17, "alpha": 0.5, "refractoryPeriod": 3 },
+  "neurons": [{ "id": "1", "potential": 0, "state": "receptive" }],
+  "connections": []
+}

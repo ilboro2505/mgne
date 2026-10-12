@@ -1,0 +1,12 @@
+[package]
+name = "mgne-cli"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "mgne"
+path = "src/main.rs"
+
+[dependencies]
+mgne-core = { path = "../mgne-core" }
+serde_json.workspace = true

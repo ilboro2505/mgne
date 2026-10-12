@@ -1,0 +1,15 @@
+# Private local archive, specifications and workspace instructions
+/.local/
+/AGENTS.md
+/docs/specs/
+
+# Generated builds, dependencies and local tools
+target/
+node_modules/
+dist/
+.tools/
+web/src/wasm/
+test-results/
+playwright-report/
+.playwright-mcp/
+.DS_Store

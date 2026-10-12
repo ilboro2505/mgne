@@ -1,0 +1,24 @@
+{
+  "name": "mgne-lab",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": { "node": ">=22.12.0" },
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "wasm": "node scripts/build-wasm.mjs",
+    "dev": "npm run wasm && vite --config web/vite.config.ts",
+    "build": "npm run wasm && npm run typecheck && vite build --config web/vite.config.ts",
+    "preview": "vite preview --config web/vite.config.ts",
+    "typecheck": "tsc --noEmit -p web/tsconfig.json",
+    "test": "node scripts/cargo.mjs test --workspace && npm run wasm && npm run typecheck && node --experimental-strip-types --test tests/parity.test.mjs tests/charts.test.mjs",
+    "test:browser": "playwright test",
+    "cargo": "node scripts/cargo.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.0",
+    "@types/node": "^24.0.0",
+    "typescript": "7.0.2",
+    "vite": "8.3.4"
+  }
+}

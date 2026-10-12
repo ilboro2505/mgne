@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "model": "mone-v1",
+  "parameters": { "threshold": 17, "rest": 20, "alpha": 0.5, "refractoryPeriod": 3 },
+  "neurons": [
+    { "id": "1", "potential": -0.1, "state": "refractory" },
+    { "id": "2", "potential": -0.217, "state": "refractory" },
+    { "id": "3", "potential": -0.326, "state": "refractory" },
+    { "id": "4", "potential": -0.489, "state": "refractory" },
+    { "id": "5", "potential": -0.6, "state": "refractory" },
+    { "id": "6", "potential": -0.9, "state": "refractory" }
+  ],
+  "connections": [
+    { "source": "1", "target": "2", "weight": 0.387 },
+    { "source": "2", "target": "3", "weight": 0.851 },
+    { "source": "3", "target": "4", "weight": 0.062 },
+    { "source": "4", "target": "5", "weight": 0.505 },
+    { "source": "5", "target": "6", "weight": 0.868 },
+    { "source": "6", "target": "1", "weight": 0.256 }
+  ]
+}

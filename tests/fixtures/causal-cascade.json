@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "model": "mone-v1",
+  "parameters": { "threshold": 2, "rest": 2.01, "alpha": 1, "refractoryPeriod": 1 },
+  "neurons": [
+    { "id": "source", "potential": 1.99, "state": "receptive" },
+    { "id": "target", "potential": 1.989999999999998, "state": "receptive" }
+  ],
+  "connections": [{ "source": "source", "target": "target", "weight": 20 }]
+}
